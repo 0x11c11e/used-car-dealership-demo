@@ -13,8 +13,7 @@ const config: Config = {
         accent: '#f59e0b',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Playfair Display', 'serif'],
+        sans: ['system-ui', '-apple-system', 'sans-serif'],
       },
     },
   },

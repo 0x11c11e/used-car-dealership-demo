@@ -59,7 +59,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
           </span>
         </div>
 
-        <div className="mt-4 pt-4 border-t border-gray-100 mt-auto">
+        <div className="mt-auto pt-4 border-t border-gray-100">
           <Link
             href={`/inventory/${vehicle.id}`}
             className="block w-full bg-slate-900 hover:bg-amber-500 text-white text-center text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200"
