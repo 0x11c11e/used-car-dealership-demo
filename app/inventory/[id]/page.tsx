@@ -20,15 +20,16 @@ import { inventory } from '@/lib/inventory';
 import { formatPrice, formatMileage } from '@/lib/utils';
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export function generateStaticParams() {
   return inventory.map((v) => ({ id: v.id }));
 }
 
-export default function VehicleDetailPage({ params }: PageProps) {
-  const vehicle = inventory.find((v) => v.id === params.id);
+export default async function VehicleDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const vehicle = inventory.find((v) => v.id === id);
 
   if (!vehicle) {
     notFound();
